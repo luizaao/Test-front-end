@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        array_elements = ["1", "8", "9", "2", "1", "8", "5", "4", "7", "2", "3", "9", "6", "4", "82", "1", "2", "3", "9", "10", "12", "5", "22", "25", "27", "31", "30", "5", "9", "80", "82", "50", "40", "41", "50"];
+
+        array_elements.sort();
+
+        var current = null;
+        var cnt = 0;
+        for (var i = 0; i < array_elements.length; i++) {
+            if (array_elements[i] != current) {
+                if (cnt > 1) {
+                    document.write(current + ' repetiu --> ' + cnt + ' vezes<br>');
+                }
+                current = array_elements[i];
+                cnt = 1;
+            } else {
+                cnt++;
+            }
+        }
+    </script>
+</body>
+
+</html>
